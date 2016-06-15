@@ -1,0 +1,2 @@
+baseurl: /portfolio
+exclude: ['README.md']
