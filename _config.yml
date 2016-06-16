@@ -7,12 +7,14 @@
 
 # Site settings
 title: Nichlas Wærnes Andersen
+name: Nichlas Wærnes Andersen
 email: nichlas@itsnwa.com
 description: Art Director & Graphic Designer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://localhost:4000/" # the base hostname & protocol for your site
 twitter_username: nichlaswa
 github_username:  itsnwa
+portfolio_name: Nichlas Wærnes Andersen
 
 # Build settings
 markdown: kramdown
