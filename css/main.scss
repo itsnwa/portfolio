@@ -1,53 +1,336 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@charset "utf-8";
-
-
-
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+        "fonts",
+        "mixins"
 ;
+
+// Color palette
+$highlight:   rgb(241, 238, 204);
+$secondary: rgb(128, 128, 128);
+$lightgrey: rgb(246, 246, 246);
+$white:     rgb(255, 255, 255);
+$black:     rgb(34, 34, 34);
+
+::selection {
+  background: $black; /* WebKit/Blink Browsers */
+  color: $white;
+}
+::-moz-selection {
+  background: $black; /* Gecko Browsers */
+  color: $white;
+}
+
+* {
+  box-sizing: border-box;
+  // border: 1px solid red;
+}
+
+a,p,h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'typewriterregular', courier;
+  font-weight: normal;
+  font-size: .9em;
+  color: $black;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  padding-bottom: .5em;
+
+  &:hover {
+    padding-bottom: .4em;
+    border-bottom: .1em solid $black;
+    cursor: crosshair;
+  }
+
+}
+
+a.logo {
+  display: block;
+  background-image: url('../images/nwa.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 34px;
+  width: 85px;
+  margin-top: .2em;
+  padding: 0;
+  &:hover { border: 0; }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  .hero {
+    height: 15vh;
+    padding: 1em;
+    display: flex;
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      padding-top: 2em;
+
+      .bio-column {
+        margin-left: 2em;
+      }
+
+      h1.hero-title {
+        color: $black;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: normal;
+        padding: 0 0 .2em 0;
+      }
+
+      h2.hero-sub {
+        color: lighten($black, 40);
+        font-size: 1em;
+        font-weight: normal;
+      }
+
+    }
+
+  }
+
+  .header {
+    padding: 2em 1em 1.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-size: 1em;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      font-size: 1em;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+  }
+
+  .work {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 .5em;
+
+    .project {
+      @include aspect-ratio(16, 10);
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: $black;
+      width: calc(50% - 1em);
+      margin: .5em;
+
+      .project-info {
+        padding: 1em 0 0 1em;
+        display: inline-block;
+
+        h3.project-title {
+          font-weight: normal;
+          margin: 0;
+          font-size: .8em;
+        }
+
+        p.category {
+          font-size: .7em;
+          text-transform: uppercase;
+          opacity: .6;
+          display: none;
+        }
+
+      }
+
+      a:hover {
+        cursor: crosshair;
+        border: none;
+      }
+
+    }
+
+    .vidflow {
+      background-image: url('http://www.itsnwa.com/wp-content/uploads/2016/04/grey_discover_desktop.jpg');
+      background-position: center;
+      a { color: $white; }
+    }
+
+    .ipadpro-homescreen {
+      background-image: url('../images/ipadpro-homescreen.jpg');
+      background-position: center;
+      a { color: $white; }
+    }
+
+    .sunk {
+      background-image: url('../images/sunk.gif');
+      background-position: center;
+      a { color: $white; }
+    }
+
+    .crop {
+      background-image: url('../images/crop.jpg');
+      background-position: center;
+    }
+
+    .whitemockups {
+      background-image: url('../work/allwhite-mockups/iphone.jpg');
+      background-position: center;
+    }
+
+    .brooklyn {
+      background-image: url('../images/brooklyn.jpg');
+      background-position: center;
+    }
+
+    .hello-world {
+      background-image: url('../images/helloworld.jpg');
+      background-position: center;
+    }
+
+    .graff {
+      background-image: url('../images/graff.jpg');
+      background-position: center;
+    }
+
+    .driks-2011 {
+      background-image: url('../images/driks-2011.jpg');
+      background-position: center;
+    }
+
+    .chall {
+      background-image: url('http://www.itsnwa.com/wp-content/uploads/2015/07/Notifications_4.gif');
+      background-position: center;
+    }
+
+  }
+
+  header.single {
+
+      padding: 4em 1em 3em 1em;
+
+  }
+
+  section.project {
+    background-color: $lightgrey;
+    padding: 1em;
+    min-height: calc(100vh - 8em);
+
+    .project-details {
+      display: flex;
+      padding: 2em 0;
+      font-size: .8em;
+
+      h3 {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1em;
+        padding-bottom: .5em;
+      }
+
+      .column {
+        width: 25%;
+        padding: 0 2em;
+
+        p { color: lighten($black, 20); }
+
+        &:first-child { padding-left: 0; }
+
+        &:nth-child(2) { border-left: 1px solid $black; }
+
+      }
+
+      .back {
+        align-self: center;
+
+        a.arrow {
+          height: 12px;
+          width: 60px;
+          display: inline-block;
+          background-image: url('../images/arrow.svg');
+          background-repeat: no-repeat;
+          padding: 0;
+
+          &:hover { border: 0; }
+
+        }
+
+      }
+
+    }
+
+    .project-content {
+      padding: 1em 0;
+
+      img {
+        max-width: 100%;
+        margin: 0;
+        padding-bottom: 1em;
+      }
+
+    }
+
+  }
+
+  .footer {
+    padding: 4.5em 1em 5em 1em;
+    text-align: center;
+
+    p {
+      color: $secondary;
+      font-size: .8em;
+      margin: 0;
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 960px) {
+
+  .container {
+
+    .work {
+
+      .project {
+        width: calc(100% - 1em);
+      }
+
+    }
+
+    section.project {
+
+      .project-details {
+        flex-wrap: wrap;
+
+        .column {
+          width: 33.3333%;
+
+          &:first-child {
+            display: none;
+          }
+
+          &:nth-child(2) {
+            border: 0;
+            padding-left: 0;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
