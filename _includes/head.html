@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="author" content="Nichlas Wærnes Andersen" />
+  <meta name="author" content="{{ site.name }}" />
   <meta name="HandheldFriendly" content="true" />
   <meta name="MobileOptimized" content="320" />
   <!-- Use maximum-scale and user-scalable at your own risk. It disables pinch/zoom. Think about usability/accessibility before including.-->
@@ -13,6 +13,6 @@
   <meta property="og:site_name" content="Nichlas Wærnes Andersen">
   <meta property="og:image" content="images/og.jpg">
   <title>Nichlas Wærnes Andersen</title>
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="stylesheet" href="{{ "css/style.css" | prepend: site.baseurl }}" media="screen">
 </head>
