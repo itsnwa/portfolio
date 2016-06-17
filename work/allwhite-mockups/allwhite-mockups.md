@@ -9,7 +9,7 @@ thumbnail: homescreen.png
 
 ![showcase image][{{ page.thumbnail }}]
 
-#This is the title
+# This is the title
 
 These mock-ups are made in Cinema 4D. I wanted to create some perspective mock-ups that were super clean in style so that the designs could shine even more through.
 
