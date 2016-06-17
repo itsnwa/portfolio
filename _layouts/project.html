@@ -2,6 +2,10 @@
 layout: default
 ---
 
-<div class="content">
-  {{ Content }}
-</div>
+{% include header.html %}
+<section class="project">
+  {% include project-meta.html %}
+  <div class="project-content">
+    {{ Content }}
+  </div>
+</section>
