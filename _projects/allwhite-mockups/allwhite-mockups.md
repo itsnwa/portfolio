@@ -5,9 +5,10 @@ year: 2016
 categories: 3D, Resource
 permalink: /allwhite-mockups/
 thumbnail: iphone.jpg
+thumb-text-color: black
 ---
 
-![iPhone 6 mock-up]({{ site.baseurl }}/work/{{ page.permalink }}{{ page.thumbnail }})
+![iPhone 6 mock-up]({{ site.baseurl }}/work/{{ page.url }}{{ page.thumbnail }})
 
 # This is the title
 
