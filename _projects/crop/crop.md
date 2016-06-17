@@ -1,11 +1,11 @@
 ---
 layout: project
-title: iPad Pro Homescreen
+title: Crop
 year: 2016
 categories: UX/UI, Concept
-permalink: /ipad-homescreen/
-thumbnail: mockup.jpg
-thumb-text-color: '#ffffff'
+permalink: /crop/
+thumbnail: crop-1.jpg
+thumb-text-color: '#222222'
 ---
 
 ![iPad Pro Homescreen]({{ site.baseurl }}/work/{{ page.url }}/mockup.jpg)
@@ -16,3 +16,5 @@ The first time Apple presented the new iPad pro with the huge screen and pencil,
 Set your personal work as your wallpaper, add custom widgets that's connected to your workflow, like calendar, inspiration source, todo list etc..
 
 Thank you for watching <3
+
+`<p>this is a paragraph<br />with a linebreak</p>`
