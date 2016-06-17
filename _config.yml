@@ -18,3 +18,9 @@ portfolio_name: Nichlas Wærnes Andersen
 
 # Build settings
 markdown: kramdown
+
+# Project collection
+collections:
+  projects:
+    output: true
+    permalink: /work/:path/

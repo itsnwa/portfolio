@@ -1,0 +1,16 @@
+<section class="section work">
+
+  {% for projects in site.projects %}
+
+    <div class="project" style="background-image: url('{{ site.baseurl }}/work/{{ projects.url }}{{ projects.thumbnail }}')">
+      <a href="{{ projects.url }}" class="content">
+        <div class="project-info">
+          <h3 class="project-title">{{ projects.title }}</h3>
+          <p class="category">{{ projects.categories }}</p>
+        </div>
+      </a>
+    </div>
+
+  {% endfor %}
+
+</section>
