@@ -3,12 +3,11 @@ layout: project
 title: All White Mockups
 year: 2016
 categories: 3D, Resource
-permalink: /allwhite-mockups/
 thumbnail: iphone.jpg
 thumb-text-color: '#222222'
 ---
 
-![iPhone 6 mock-up]({{ site.baseurl }}/work/{{ page.url }}{{ page.thumbnail }})
+![iPhone 6 mock-up]({{ site.baseurl }}/iphone.jpg)
 
 # This is the title
 
