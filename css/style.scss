@@ -221,12 +221,20 @@ a.logo {
 
     .project-content {
       padding: 1em 0;
+      display: flex;
+      flex-direction: column;
 
-        img {
-          max-width: 100%;
-          margin: 0;
-          padding-bottom: 1em;
-        }
+      p {
+        max-width: 700px;
+        padding: 3em 0;
+        align-self: center;
+      }
+
+      img {
+        max-width: 100%;
+        margin: 0;
+        padding-bottom: 1em;
+      }
 
     }
 
