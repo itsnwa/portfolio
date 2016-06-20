@@ -67,7 +67,6 @@ a.button {
 
   &:hover {
     border: none;
-    padding: 1.2em 1.8em;
     background-color: lighten($black, 5);
   }
 
@@ -145,7 +144,7 @@ a.button {
   section.work {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 .5em;
+    padding: 0 .5em 5em .5em;
 
     .project {
       @include aspect-ratio(16, 10);
@@ -184,18 +183,29 @@ a.button {
   }
 
   section.instagram {
-    padding: 5em .5em 0 .5em;
+    padding: 5em 1em 5em 1em;
     display: flex;
     flex-direction: column;
+    background-color: $black;
+
+    h2 {
+      color: lighten($black, 20);
+      align-self: center;
+      text-transform: uppercase;
+      font-size: 1em;
+      letter-spacing: .1em;
+      padding-bottom: 3em;
+    }
 
     .instagram-container {
       padding-bottom: 3em;
-      display: flex;
-      flex-wrap: wrap;
+      column-count: 3;
+      column-width: calc(33.333% - 1em);
+      column-gap: 1em;
 
       .instagram-post {
-        margin: .5em;
-        width: calc(33.333% - 1em);
+        padding-bottom: 1em;
+        display: inline-block;
 
         img {
           width: 100%;
@@ -211,7 +221,14 @@ a.button {
     }
 
     .button {
+      background-color: $white;
+      color: $black;
       align-self: center;
+
+      &:hover {
+        background-color: darken($white, 5);
+      }
+
     }
 
   }
@@ -367,13 +384,8 @@ a.button {
     section.instagram {
 
       .instagram-container {
-
-        .instagram-post {
-          margin: .5em;
-          width: calc(50% - 1em);
-
-        }
-
+        column-count: 2;
+        column-width: calc(50% - 1em);
       }
 
     }
@@ -388,13 +400,8 @@ a.button {
     section.instagram {
 
       .instagram-container {
-
-        .instagram-post {
-          margin: .5em;
-          width: calc(25% - 1em);
-
-        }
-
+        column-count: 4;
+        column-width: calc(25% - 1em);
       }
 
     }
