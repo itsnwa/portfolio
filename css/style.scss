@@ -310,12 +310,20 @@ a.button {
 
       .text-block {
         align-self: center;
-        padding: 3em 0;
+        padding: 3em 0 4em 0;
         width: 60%;
 
         p {
           line-height: 1.9em;
           padding: 1em 0;
+        }
+
+        a {
+          padding-bottom: .3em;
+          border-bottom: 1px solid $black;
+          &:hover {
+            opacity: .6;
+          }
         }
 
       }
