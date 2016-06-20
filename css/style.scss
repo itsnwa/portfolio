@@ -189,12 +189,12 @@ a.button {
     background-color: $black;
 
     h2 {
-      color: lighten($black, 20);
+      color: lighten($black, 80);
       align-self: center;
       text-transform: uppercase;
-      font-size: 1em;
+      font-size: .8em;
       letter-spacing: .1em;
-      padding-bottom: 3em;
+      padding-bottom: 5em;
     }
 
     .instagram-container {
@@ -269,6 +269,7 @@ a.button {
       .column {
         width: 25%;
         padding: 0 2em;
+        flex: 1;
 
         p { color: lighten($black, 20); }
 
@@ -282,11 +283,12 @@ a.button {
         align-self: center;
 
         a.arrow {
-          height: 12px;
+          height: 3em;
           width: 60px;
           display: inline-block;
           background-image: url('../assets/arrow.svg');
           background-repeat: no-repeat;
+          background-position: center;
           padding: 0;
           transition: all 140ms;
 
