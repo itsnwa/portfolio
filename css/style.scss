@@ -318,7 +318,7 @@ a.button {
           padding: 1em 0;
         }
 
-        a {
+        a:not(.button) {
           padding-bottom: .3em;
           border-bottom: 1px solid $black;
           &:hover {
