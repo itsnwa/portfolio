@@ -55,16 +55,21 @@ a {
 
 }
 
-a.logo {
-  display: block;
-  background-image: url('../assets/nwa.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 34px;
-  width: 85px;
-  margin-top: .2em;
-  padding: 0;
-  &:hover { border: 0; }
+a.button {
+  background-color: $black;
+  color: $white;
+  font-size: .75em;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: 1em 1.4em;
+  transition: all 140ms;
+
+  &:hover {
+    border: none;
+    padding: 1.2em 1.8em;
+    background-color: lighten($black, 5);
+  }
+
 }
 
 .container {
@@ -81,6 +86,18 @@ a.logo {
       display: flex;
       align-items: center;
       padding-top: 2em;
+
+      a.logo {
+        display: block;
+        background-image: url('../assets/nwa.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 34px;
+        width: 85px;
+        margin-top: .2em;
+        padding: 0;
+        &:hover { border: 0; }
+      }
 
       .bio-column {
         margin-left: 2em;
@@ -166,8 +183,18 @@ a.logo {
   }
 
   header.single {
+    padding: 3em 1em;
 
-      padding: 4em 1em 3em 1em;
+    a.logo {
+      display: block;
+      background-image: url('../assets/nwa.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 24px;
+      width: 60px;
+      padding: 0;
+      &:hover { border: 0; }
+    }
 
   }
 
@@ -211,7 +238,9 @@ a.logo {
           background-repeat: no-repeat;
           padding: 0;
 
-          &:hover { border: 0; }
+          &:hover {
+            border: 0;
+          }
 
         }
 
