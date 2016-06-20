@@ -12,7 +12,7 @@ thumb-text-color: '#222222'
 <div class="text-block">
   <p>Chelsea Landmark is a New York City rental building located between the three popular neigborhoods; Chelsea, NoMad and Flatiron.</p>
 
-  <p>This is just to check how it looks with one more line in there.</p>
+  <p>I was hired to renew their excisting logo, create a new website, design floorplan papers, building banners and a follow-up email template</p>
 </div>
 
 <div class="cl-logo-container">
