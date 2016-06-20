@@ -9,9 +9,11 @@ thumb-text-color: '#222222'
 
 ![Chelsea Landmark Entrance]({{ site.baseurl }}/assets/images/cl_logo_exterior_1.jpg)
 
-Chelsea Landmark is a New York City rental building located between the three popular neigborhoods; Chelsea, NoMad and Flatiron.
+<div class="text-block">
+  <p>Chelsea Landmark is a New York City rental building located between the three popular neigborhoods; Chelsea, NoMad and Flatiron.</p>
 
-<a href="http://chelsealandmark.com" class="button">Open website</a>
+  <p>This is just to check how it looks with one more line in there.</p>
+</div>
 
 <div class="cl-logo-container">
   <div class="logo-black">
@@ -23,3 +25,7 @@ Chelsea Landmark is a New York City rental building located between the three po
 </div>
 
 ![Floor Plan Paper]({{ site.baseurl }}/assets/images/cl_floorplan-1.jpg)
+
+<div class="text-block center-content">
+  <a href="http://chelsealandmark.com" class="button">Open website</a>
+</div>

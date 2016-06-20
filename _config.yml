@@ -10,7 +10,7 @@ title: Nichlas Wærnes Andersen
 name: Nichlas Wærnes Andersen
 email: nichlas@itsnwa.com
 description: Multi-disiplinary designer based in Brooklyn, NY
-baseurl: "/portfolio" # Make sure to add /portfolio to this var before uploading to GitHub
+baseurl: "" # Make sure to add /portfolio to this var before uploading to GitHub
 url: "http://itsnwa.github.io/portfolio/" # the base hostname & protocol for your site
 twitter_username: nichlaswa
 github_username:  itsnwa

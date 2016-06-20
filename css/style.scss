@@ -286,10 +286,20 @@ a.button {
       display: flex;
       flex-direction: column;
 
-      p {
-        max-width: 700px;
-        padding: 3em 0;
+      .text-block {
         align-self: center;
+        padding: 3em 0;
+        width: 60%;
+
+        p {
+          line-height: 1.9em;
+          padding: 1em 0;
+        }
+
+      }
+
+      .center-content {
+        text-align: center;
       }
 
       img {
