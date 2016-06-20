@@ -6,18 +6,26 @@ $(document).ready(function() {
   });
 
   // Unwrap images from p tags
-  $('.project-content p > img').unwrap().removeAttr('height').removeAttr('width');
-  $('.project-content p > a > img').removeAttr('height').removeAttr('width').parent().unwrap();
+  $('.project-content p > img').unwrap();
 
   // Fetching all my Instagram photos
-  var feed = new Instafeed({
-    get: 'user',
-    userId: '781603',
-    accessToken: '781603.1677ed0.b925883d446a42378ec690d6dc250db0',
-    template: '<a href="{{link}}" class="instagram-post"><img src="{{image}}" /></a>',
-    limit: 9,
-    resolution: 'standard_resolution'
+  var token = '781603.655b187.9a8d7aedc0d344c08e3cb4d418c09667',
+      num_photos = 10;
+
+  $.ajax({
+  	url: 'https://api.instagram.com/v1/users/self/media/recent',
+  	dataType: 'jsonp',
+  	type: 'GET',
+  	data: {access_token: token, count: num_photos},
+  	success: function(data){
+   		console.log(data);
+  		for( x in data.data ){
+  			$('.instagram-container').append('<div class="instagram-post"><img src="'+data.data[x].images.standard_resolution.url+'"></div>');
+  		}
+  	},
+  	error: function(data){
+  		console.log(data);
+  	}
   });
-  feed.run();
 
 });

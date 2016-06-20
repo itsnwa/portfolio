@@ -193,11 +193,14 @@ a.button {
       display: flex;
       flex-wrap: wrap;
 
-      a.instagram-post {
+      .instagram-post {
         margin: .5em;
         width: calc(33.333% - 1em);
 
-        img { max-width: 100%; }
+        img {
+          width: 100%;
+          max-width: 100%;
+        }
 
         &:hover {
           border: none;
@@ -361,6 +364,40 @@ a.button {
 
     }
 
+    section.instagram {
+
+      .instagram-container {
+
+        .instagram-post {
+          margin: .5em;
+          width: calc(50% - 1em);
+
+        }
+
+      }
+
+    }
+
   }
 
+}
+
+@media only screen and (min-width: 1600px) {
+  .container {
+
+    section.instagram {
+
+      .instagram-container {
+
+        .instagram-post {
+          margin: .5em;
+          width: calc(25% - 1em);
+
+        }
+
+      }
+
+    }
+
+  }
 }
