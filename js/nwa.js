@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // Reveal project categories on hover
   $('.project').hover(function() {
-    $('p.category', $(this)).slideToggle(100, 'linear').display(100, 'linear');
+    $('p.category', $(this)).slideToggle(100, 'linear').show();
   });
 
   // Unwrap images from p tags
@@ -27,5 +27,12 @@ $(document).ready(function() {
   		console.log(data);
   	}
   });
+
+  // Get my current neighborhood location based on Swarm check-ins
+  var config = {
+    apiKey: 'OA2VTCBFDZYE0KGYDFKSOS1KZ3JH5QORVA4Q551IPYCHHP1I',
+    authUrl: 'https://foursquare.com/',
+    apiUrl: 'https://api.foursquare.com/'
+  };
 
 });
