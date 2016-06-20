@@ -268,9 +268,11 @@ a.button {
           background-image: url('../assets/arrow.svg');
           background-repeat: no-repeat;
           padding: 0;
+          transition: all 140ms;
 
           &:hover {
             border: 0;
+            transform: translate(20%, 0);
           }
 
         }

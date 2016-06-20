@@ -22,4 +22,4 @@ Chelsea Landmark is a New York City rental building located between the three po
   </div>
 </div>
 
-Some more content comes after this
+![Floor Plan Paper]({{ site.baseurl }}/assets/images/cl_floorplan-1.jpg)
