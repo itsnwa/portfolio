@@ -189,6 +189,7 @@ a.button {
       column-count: 3;
       column-width: calc(33.333% - 1em);
       column-gap: 1em;
+      line-height: 0;
 
       .instagram-post {
         padding-bottom: 1em;
