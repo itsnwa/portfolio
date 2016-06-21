@@ -154,7 +154,6 @@ a.button {
         p.category {
           font-size: .7em;
           text-transform: uppercase;
-          opacity: .6;
           display: none;
         }
 
@@ -302,7 +301,7 @@ a.button {
         }
 
         a {
-          padding-bottom: .3em;
+          padding-bottom: .02em;
           border-bottom: 1px solid $black;
           &:hover {
             opacity: .6;
@@ -362,6 +361,15 @@ a.button {
 
       }
 
+      .project-content {
+
+        .text-block {
+          width: 100%;
+          max-width: 90%;
+        }
+
+      }
+
     }
 
     section.instagram {
@@ -385,6 +393,18 @@ a.button {
       .instagram-container {
         column-count: 4;
         column-width: calc(25% - 1em);
+      }
+
+    }
+
+    section.project {
+
+      .project-content {
+
+        .text-block {
+          width: 40%;
+        }
+
       }
 
     }
