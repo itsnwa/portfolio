@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // Reveal project categories on hover
   $('.project').hover(function() {
-    $('p.category', $(this)).slideToggle(100, 'linear').show();
+    $('p.category', $(this)).slideToggle(150, 'swing');
   });
 
 	var isTouchDevice = 'ontouchstart' in document.documentElement;
