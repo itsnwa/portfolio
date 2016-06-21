@@ -1,5 +1,4 @@
 ---
-layout: project
 title: Crop
 year: 2016
 categories: UX/UI, Concept

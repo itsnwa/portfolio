@@ -1,5 +1,4 @@
 ---
-layout: project
 title: iPad Pro Homescreen
 year: 2016
 categories: UX/UI, Concept

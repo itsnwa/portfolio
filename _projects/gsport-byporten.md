@@ -1,5 +1,4 @@
 ---
-layout: project
 title: G-Sport Byporten
 year: 2016
 categories: Retail, Print

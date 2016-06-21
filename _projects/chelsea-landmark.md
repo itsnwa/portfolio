@@ -1,5 +1,4 @@
 ---
-layout: project
 title: Chelsea Landmark
 year: 2016
 categories: Web, Logo, Print

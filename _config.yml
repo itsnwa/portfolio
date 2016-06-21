@@ -24,3 +24,10 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+
+defaults:
+  - scope:
+      type: projects
+    values:
+      path: ""
+      layout: project

@@ -1,5 +1,4 @@
 ---
-layout: project
 title: All White Mockups
 year: 2016
 categories: 3D, Resource
