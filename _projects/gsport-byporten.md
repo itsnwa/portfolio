@@ -18,5 +18,5 @@ thumb-text-color: '#ffffff'
 ![G-Sport Byporten]({{ site.baseurl }}/assets/images/gsport-byporten-5.jpg)
 
 <div class="text-block center-content">
-  <p>All photos are taken by <a href="http://tengsphoto.com">Daniel Tengs</a></p>
+  <p>All photos shot by <a href="http://tengsphoto.com">Daniel Tengs</a></p>
 </div>
