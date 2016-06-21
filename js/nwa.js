@@ -15,11 +15,7 @@ $(document).ready(function() {
 
   // Fetching all my Instagram photos
   var token = '781603.655b187.9a8d7aedc0d344c08e3cb4d418c09667',
-      if( isTouchDevice ) {
         num_photos = 10;
-      else {
-        num_photos = 9;
-      }
 
   $.ajax({
   	url: 'https://api.instagram.com/v1/users/self/media/recent',
