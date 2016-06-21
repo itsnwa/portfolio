@@ -5,15 +5,10 @@
 @import
         "fonts",
         "mixins",
+        "variables",
+        "footer",
         "proj-chelsea"
 ;
-
-// Color palette
-$highlight:   rgb(241, 238, 204);
-$secondary: rgb(128, 128, 128);
-$lightgrey: rgb(246, 246, 246);
-$white:     rgb(255, 255, 255);
-$black:     rgb(34, 34, 34);
 
 ::selection {
   background: $black; /* WebKit/Blink Browsers */
@@ -35,7 +30,7 @@ a,p,h1,h2,h3,h4,h5,h6 {
 }
 
 body {
-  font-family: 'typewriterregular', courier;
+  font-family: 'SFMono-Regular', courier;
   font-weight: normal;
   font-size: .9em;
   color: $black;
@@ -49,7 +44,7 @@ a {
   padding-bottom: .5em;
 
   &:hover {
-    padding-bottom: .4em;
+    padding-bottom: .5em;
     border-bottom: .1em solid $black;
     cursor: crosshair;
   }
@@ -57,17 +52,12 @@ a {
 }
 
 a.button {
-  background-color: $black;
-  color: $white;
   font-size: .75em;
   text-transform: uppercase;
   letter-spacing: .08em;
-  padding: 1em 1.4em;
-  transition: all 140ms;
 
   &:hover {
-    border: none;
-    background-color: lighten($black, 5);
+    opacity: 0.8;
   }
 
 }
@@ -221,14 +211,9 @@ a.button {
     }
 
     .button {
-      background-color: $white;
-      color: $black;
+      color: $white;
       align-self: center;
-
-      &:hover {
-        background-color: darken($white, 5);
-      }
-
+      border-bottom: 1px solid $white;
     }
 
   }
@@ -318,7 +303,7 @@ a.button {
           padding: 1em 0;
         }
 
-        a:not(.button) {
+        a {
           padding-bottom: .3em;
           border-bottom: 1px solid $black;
           &:hover {
@@ -338,18 +323,6 @@ a.button {
         padding-bottom: 1em;
       }
 
-    }
-
-  }
-
-  .footer {
-    padding: 4.5em 1em 5em 1em;
-    text-align: center;
-
-    p {
-      color: $secondary;
-      font-size: .8em;
-      margin: 0;
     }
 
   }

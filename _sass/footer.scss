@@ -1,0 +1,16 @@
+section.footer {
+  padding: 4.5em 1em 5em 1em;
+  text-align: center;
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+
+    .stamp {
+      width: 100px;
+      height: auto;
+    }
+
+  }
+
+}

@@ -28,11 +28,11 @@ $(document).ready(function() {
   	}
   });
 
-  // Get my current neighborhood location based on Swarm check-ins
-  var config = {
-    apiKey: 'OA2VTCBFDZYE0KGYDFKSOS1KZ3JH5QORVA4Q551IPYCHHP1I',
-    authUrl: 'https://foursquare.com/',
-    apiUrl: 'https://api.foursquare.com/'
-  };
+  // // Get my current neighborhood location based on Swarm check-ins
+  // var config = {
+  //   apiKey: 'OA2VTCBFDZYE0KGYDFKSOS1KZ3JH5QORVA4Q551IPYCHHP1I',
+  //   authUrl: 'https://foursquare.com/',
+  //   apiUrl: 'https://api.foursquare.com/'
+  // };
 
 });
