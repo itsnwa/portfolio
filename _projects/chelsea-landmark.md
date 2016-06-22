@@ -15,12 +15,8 @@ thumb-text-color: '#222222'
 </div>
 
 <div class="cl-logo-container">
-  <div class="logo-black">
-    <img src="{{ site.baseurl }}/assets/images/cl_logo_white.png" alt="Chelsea Landmark Logo White" />
-  </div>
-  <div class="logo-white">
-    <img src="{{ site.baseurl }}/assets/images/cl_logo_black.png" alt="Chelsea Landmark Logo Black" />
-  </div>
+  <div class="cl-logo white"></div>
+  <div class="cl-logo black"></div>
 </div>
 
 ![Floor Plan Paper]({{ site.baseurl }}/assets/images/cl_floorplan-1.jpg)
