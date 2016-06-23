@@ -12,7 +12,7 @@ thumb-text-color: "#222222"
   <p>Chall is a video sharing app for social
 challenges, record a video and chall the
 community or your friends, and see
-how they respond.</p>
+how they respond. Test.</p>
 </div>
 
 ![Chall Feed Gif]({{ site.baseurl }}/assets/images/chall-feed-gif.gif)
