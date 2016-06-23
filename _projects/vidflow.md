@@ -1,11 +1,17 @@
 ---
 title: vidFlow
+date: '2016-06-23 03:37:16'
+categories:
+- UI/UX
+path: ''
+layout: project
 year: 2015
-categories: UI/UX
 thumbnail: vidflow-discover-desktop.jpg
-thumb-text-color: '#ffffff'
----
+thumb-text-color: "#ffffff"
+slug: vidflow
+tags: []
 
+---
 ![vidFlow Desktop]({{ site.baseurl }}/assets/images/vidflow-discover-desktop.jpg)
 
 <div class="text-block">
