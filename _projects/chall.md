@@ -1,18 +1,11 @@
 ---
 title: Chall
-date: '2016-06-23 03:37:16'
-categories:
-- UI/UX,
-- Branding
-path: ''
-layout: project
+categories: UI/UX, Branding
 year: 2015
 thumbnail: chall-thumb.jpg
 thumb-text-color: "#222222"
-slug: chall
-tags: []
-
 ---
+
 ![Chall Feed]({{ site.baseurl }}/assets/images/chall-1.jpg)
 
 <div class="text-block">

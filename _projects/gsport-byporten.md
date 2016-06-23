@@ -1,18 +1,11 @@
 ---
 title: G-Sport Byporten
-date: '2016-06-23 03:37:16'
-categories:
-- Retail,
-- Print
-path: ''
-layout: project
+categories: Retail, Print
 year: 2016
 thumbnail: gsport-byporten-7.jpg
 thumb-text-color: "#ffffff"
-slug: gsport-byporten
-tags: []
-
 ---
+
 ![G-Sport Byporten]({{ site.baseurl }}/assets/images/gsport-byporten-1.jpg)
 
 <div class="text-block">

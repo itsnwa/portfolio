@@ -1,17 +1,9 @@
 ---
 title: All White Mockups
-date: '2016-06-23 03:37:16'
-categories:
-- 3D,
-- Resource
-path: ''
-layout: project
+categories: 3D, Resource
 year: 2016
 thumbnail: iphone.jpg
 thumb-text-color: "#222222"
-slug: allwhite-mockups
-tags: []
-
 ---
 ![iPhone 6 mock-up]({{ site.baseurl }}/assets/images/iphone.jpg)
 

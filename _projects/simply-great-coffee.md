@@ -1,18 +1,11 @@
 ---
 title: Simply Great Coffee
-date: '2016-06-23 03:37:16'
-categories:
-- Retail,
-- Signage
-path: ''
-layout: project
+categories: Retail, Signage
 year: 2012
 thumbnail: simply-great-coffee-1.jpg
 thumb-text-color: "#ffffff"
-slug: simply-great-coffee
-tags: []
-
 ---
+
 ![Simply Great Coffee]({{ site.baseurl }}/assets/images/simply-great-coffee-1.jpg)
 
 <div class="text-block">

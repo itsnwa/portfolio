@@ -1,18 +1,9 @@
 ---
 title: Chelsea Landmark
-date: '2016-06-23 03:37:16'
-categories:
-- Web,
-- Logo,
-- Print
-path: ''
-layout: project
+categories: Web, Logo, Print
 year: 2016
 thumbnail: cl_logo_exterior_1.jpg
 thumb-text-color: "#222222"
-slug: chelsea-landmark
-tags: []
-
 ---
 ![Chelsea Landmark Entrance]({{ site.baseurl }}/assets/images/cl_logo_exterior_1.jpg)
 
