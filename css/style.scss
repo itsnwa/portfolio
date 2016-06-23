@@ -343,6 +343,12 @@ a.button {
         text-align: center;
       }
 
+      // If there's two text-block's on top of each other, remove top padding from the last one.
+      .text-block + .text-block {
+        padding-top: 0;
+        padding-bottom: 6em;
+      }
+
       img {
         max-width: 100%;
         width: 100%;
