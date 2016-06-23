@@ -7,7 +7,9 @@
         "mixins",
         "variables",
         "footer",
-        "proj-chelsea"
+        "project-palette",
+        "proj-chelsea",
+        "proj-chall"
 ;
 
 ::selection {
@@ -63,7 +65,7 @@ a.contact {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: $black;
-  
+
   &:hover {
     border-bottom: 1px solid transparent !important;
   }

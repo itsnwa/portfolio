@@ -1,0 +1,25 @@
+.palette {
+  display: flex;
+  justify-content: space-around;
+  padding: 5em 0 5em 0;
+
+  .palette-swatch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    transition: transform .75s ease;
+
+    text-align: center;
+    font-size: 0.75em;
+    text-transform: uppercase;
+
+    &:hover {
+      transform: scale(1.35);
+    }
+
+  }
+
+}

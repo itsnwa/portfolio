@@ -23,10 +23,16 @@ how they respond.</p>
 </div>
 
 ![Chall Feed Gif]({{ site.baseurl }}/assets/images/chall-feed-gif.gif)
+![Chall Logo]({{ site.baseurl }}/assets/images/chall-logo.jpg)
+
+<div class="palette">
+  <div class="palette-swatch" style="background-color: #62bedb;"></div>
+  <div class="palette-swatch" style="background-color: #313131;"></div>
+  <div class="palette-swatch" style="background-color: #ffffff;"></div>
+</div>
 
 <div class="text-block">
-  <p>Chall was recently published in BNN’s
-  UI Graphics book in Japan.</p>
+  <p>Chall was published in <a href="http://bnn.co.jp">BNN’s</a> UI Graphics book in Japan.</p>
 </div>
 
 ![Chall in BNN's UI Book]({{ site.baseurl }}/assets/images/chall-ui-book-1.jpg)
