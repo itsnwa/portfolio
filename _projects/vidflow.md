@@ -6,7 +6,7 @@ thumbnail: vidflow-thumb.jpg
 thumb-text-color: "#ffffff"
 ---
 
-![vidFlow Desktop]({{ site.baseurl }}/assets/images/vidflow-discover-desktop.jpg)
+![vidFlow Desktop]({{ site.baseurl }}/assets/images/vidflow-thumb.jpg)
 
 <div class="text-block">
   <p>vidFlow, the world’s first music video service with
