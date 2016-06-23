@@ -92,14 +92,13 @@ a.button {
   margin: 0 auto;
 
   .hero {
-    height: 15vh;
-    padding: 1em;
+    height: auto;
+    padding: 5em 1em 4em 1em;
     display: flex;
 
     .hero-content {
       display: flex;
       align-items: center;
-      padding-top: 2em;
 
       a.logo {
         display: block;
@@ -108,7 +107,6 @@ a.button {
         background-position: center;
         height: 34px;
         width: 85px;
-        margin-top: .2em;
         padding: 0;
         border: 0;
       }
@@ -343,6 +341,23 @@ a.button {
 @media only screen and (max-width: 960px) {
 
   .container {
+
+    .hero {
+      height: auto;
+      padding: 4em 1em 3em 1em;
+
+      .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .bio-column {
+          padding-top: 3.5em;
+          margin-left: 0;
+        }
+
+      }
+
+    }
 
     section.work {
 
