@@ -21,7 +21,14 @@
   color: $white;
 }
 
-*, *:before, *:after {box-sizing:  border-box !important;}
+*, *:before, *:after {
+  box-sizing:  border-box !important;
+
+  -webkit-transition:  .5s ease;
+  -o-transition:       .5s ease;
+  transition:          .5s ease;
+
+}
 
 p,h1,h2,h3,h4,h5,h6 {
   margin: 0;
