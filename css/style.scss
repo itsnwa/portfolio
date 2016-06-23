@@ -21,7 +21,7 @@
 
 *, *:before, *:after {box-sizing:  border-box !important;}
 
-a,p,h1,h2,h3,h4,h5,h6 {
+p,h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0;
 }
@@ -36,25 +36,50 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: $black;
-  padding-bottom: .5em;
+  text-decoration: none;
+  -webkit-transition:  all 0.18s cubic-bezier(0.55, 0.025, 0.455, 0.98);
+  -o-transition:       all 0.18s cubic-bezier(0.55, 0.025, 0.455, 0.98);
+  transition:          all 0.18s cubic-bezier(0.55, 0.025, 0.455, 0.98);
 
   &:hover {
-    padding-bottom: .5em;
-    border-bottom: .1em solid $black;
     cursor: crosshair;
   }
 
 }
 
-a.button {
-  font-size: .75em;
-  text-transform: uppercase;
-  letter-spacing: .08em;
+p > a {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $black;
 
   &:hover {
-    opacity: 0.8;
+    border-bottom: 1px solid transparent !important;
+  }
+
+}
+
+a.contact {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $black;
+  
+  &:hover {
+    border-bottom: 1px solid transparent !important;
+  }
+
+}
+
+a.button {
+  font-size: .85em;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $black;
+
+  &:hover {
+    border-bottom: 1px solid transparent !important;
   }
 
 }
@@ -83,7 +108,7 @@ a.button {
         width: 85px;
         margin-top: .2em;
         padding: 0;
-        &:hover { border: 0; }
+        border: 0;
       }
 
       .bio-column {
@@ -159,11 +184,6 @@ a.button {
 
       }
 
-      a:hover {
-        cursor: crosshair;
-        border: none;
-      }
-
     }
 
   }
@@ -199,18 +219,14 @@ a.button {
           max-width: 100%;
         }
 
-        &:hover {
-          border: none;
-        }
-
       }
 
     }
 
-    .button {
+    a.button {
       color: $white;
+      border-bottom-color: $white;
       align-self: center;
-      border-bottom: 1px solid $white;
     }
 
   }
@@ -226,7 +242,6 @@ a.button {
       height: 24px;
       width: 60px;
       padding: 0;
-      &:hover { border: 0; }
     }
 
   }
@@ -272,10 +287,13 @@ a.button {
           background-repeat: no-repeat;
           background-position: center;
           padding: 0;
-          transition: all 140ms;
+          -webkit-transition: all 140ms ease;
+          -moz-transition: all 140ms ease;
+          -ms-transition: all 140ms ease;
+          -o-transition: all 140ms ease;
+          transition: all 140ms ease;
 
           &:hover {
-            border: 0;
             transform: translate(20%, 0);
           }
 
@@ -298,14 +316,6 @@ a.button {
         p {
           line-height: 1.9em;
           padding: 1em 0;
-        }
-
-        a {
-          padding-bottom: .02em;
-          border-bottom: 1px solid $black;
-          &:hover {
-            opacity: .6;
-          }
         }
 
       }
