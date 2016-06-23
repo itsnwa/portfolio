@@ -23,11 +23,6 @@
 
 *, *:before, *:after {
   box-sizing:  border-box !important;
-
-  -webkit-transition:  .5s ease;
-  -o-transition:       .5s ease;
-  transition:          .5s ease;
-
 }
 
 p,h1,h2,h3,h4,h5,h6 {
@@ -172,6 +167,9 @@ a.button {
       color: $black;
       width: calc(50% - 1em);
       margin: .5em;
+      -webkit-transition:  .5s ease;
+      -o-transition:       .5s ease;
+      transition:          .5s ease;
 
       .project-info {
         padding: 1em 0 0 1em;
