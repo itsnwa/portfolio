@@ -1,6 +1,6 @@
 ---
 title: iPad Pro Homescreen
-categories: UX/UI, Concept
+categories: UI/UX, Concept
 year: 2016
 thumbnail: mockup.jpg
 thumb-text-color: "#ffffff"
