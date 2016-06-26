@@ -6,9 +6,12 @@ section.footer {
     display: flex;
     justify-content: center;
 
-    .stamp {
+    a.stamp {
+      display: inline-block;
       width: 100px;
-      height: auto;
+      height: 100px;
+      background-image: url('../assets/stamp.svg');
+      background-repeat: no-repeat;
     }
 
   }
