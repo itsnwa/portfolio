@@ -1,0 +1,53 @@
+.my-info {
+  display: none;
+  padding: 3em 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-left: calc(25% + 1em);
+
+    .column {
+      flex: 1;
+      padding: 0 0 7em 0;
+      max-width: 480px;
+      font-size: .8em;
+      font-family: 'sf-mono-light', curiour, sans-serif;
+      color: $black;
+      letter-spacing: .1em;
+
+      h2.title {
+        font-family: 'sf-mono-medium', curiour, sans-serif;
+        font-size: 1em;
+        text-transform: uppercase;
+        padding-bottom: .85em;
+      }
+
+      .contact-columns {
+        display: flex;
+        a.tel { margin-right: 4em; }
+      }
+
+      .social-links {
+        display: inline-flex;
+        list-style: none;
+        padding: 0;
+        li {
+          margin-right: 3em;
+          &:last-child { margin-right: 0; }
+        }
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .my-info {
+
+    .container {
+      padding: 1em;
+    }
+
+  }
+}

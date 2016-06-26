@@ -4,21 +4,24 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "fonts",
+        "project-palette",
         "mixins",
         "variables",
+        "myinfo",
         "footer",
-        "project-palette",
+
+        // Project specific styles
         "proj-chelsea",
         "proj-chall"
 ;
 
 ::selection {
-  background: $black; /* WebKit/Blink Browsers */
-  color: $white;
+  background: $highlight; /* WebKit/Blink Browsers */
+  color: $black;
 }
 ::-moz-selection {
-  background: $black; /* Gecko Browsers */
-  color: $white;
+  background: $highlight; /* Gecko Browsers */
+  color: $black;
 }
 
 *, *:before, *:after {

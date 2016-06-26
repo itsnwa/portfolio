@@ -13,6 +13,11 @@ $(document).ready(function() {
   // Unwrap images from p tags
   $('.project-content p > img').unwrap();
 
+  // My info section
+  $('.my-info-toggle').click(function() {
+    $('.my-info').slideToggle(150, 'swing');
+  });
+
   // Fetching all my Instagram photos
   var token = '781603.655b187.9a8d7aedc0d344c08e3cb4d418c09667',
         num_photos = 10;
