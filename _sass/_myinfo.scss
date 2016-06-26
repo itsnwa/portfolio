@@ -1,6 +1,6 @@
 .my-info {
   display: none;
-  padding: 3em 0;
+  padding: 3em 0 0 0;
 
   .container {
     display: flex;
@@ -9,7 +9,7 @@
 
     .column {
       flex: 1;
-      padding: 0 0 7em 0;
+      padding: 0 0 6em 0;
       max-width: 480px;
       font-size: .8em;
       font-family: 'sf-mono-light', curiour, sans-serif;
