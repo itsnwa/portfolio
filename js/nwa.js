@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   // My info section
   $('.my-info-toggle').click(function() {
-    $('.my-info').slideToggle(150, 'swing');
+    $('.my-info').slideToggle(250, 'swing');
   });
 
   // Fetching all my Instagram photos

@@ -28,15 +28,22 @@
         a.tel { margin-right: 4em; }
       }
 
-      .social-links {
-        display: inline-flex;
-        list-style: none;
-        padding: 0;
-        li {
-          margin-right: 3em;
-          &:last-child { margin-right: 0; }
-        }
+      a.social-item {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 3em;
+        border: 0;
+
+        &:hover { border-bottom: 0; }
+
       }
+
+      a.twitter    { background-image: url('../assets/twitter.svg'); }
+      a.instagram  { background-image: url('../assets/instagram.svg'); }
+      a.dribbble   { background-image: url('../assets/dribbble.svg'); }
 
     }
 
@@ -46,7 +53,7 @@
       border-bottom-color: $black;
 
       &:hover {
-        border-bottom: 1px solid transparent !important;
+        border-bottom: 1px solid transparent;
       }
 
     }
