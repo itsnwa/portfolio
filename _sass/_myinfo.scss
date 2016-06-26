@@ -61,7 +61,7 @@
   }
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: $breakpoint-small) {
   .my-info {
 
     .container {
