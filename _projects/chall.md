@@ -5,9 +5,6 @@ year: 2015
 thumbnail: chall-thumb.jpg
 thumb-text-color: "#222222"
 ---
-<div class="notibar">
-  <p>This project will be updated with more content, stay tuned.</p>
-</div>
 
 ![Chall Feed]({{ site.baseurl }}/assets/images/chall-1.jpg)
 
