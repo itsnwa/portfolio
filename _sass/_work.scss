@@ -1,0 +1,37 @@
+section.work {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 .5em 5em .5em;
+
+  .project {
+    @include aspect-ratio(16, 10);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $black;
+    width: calc(50% - 1em);
+    margin: .5em;
+    -webkit-transition:  .5s ease;
+    -o-transition:       .5s ease;
+    transition:          .5s ease;
+
+    .project-info {
+      padding: 1em 0 0 1em;
+      display: inline-block;
+
+      h3.project-title {
+        font-weight: normal;
+        margin: 0;
+        font-size: .8em;
+      }
+
+      p.category {
+        font-size: .7em;
+        text-transform: uppercase;
+        display: none;
+      }
+
+    }
+
+  }
+
+}
