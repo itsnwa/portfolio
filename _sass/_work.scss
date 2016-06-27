@@ -25,9 +25,16 @@ section.work {
       }
 
       p.category {
+        height: 0;
+        overflow: hidden;
         font-size: .7em;
         text-transform: uppercase;
-        display: none;
+        transition: height 150ms;
+
+        &:hover {
+          height: 20px;
+        }
+
       }
 
     }

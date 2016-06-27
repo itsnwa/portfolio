@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
-  // Reveal project categories on hover
-  $('.project').hover(function() {
-    $('p.category', $(this)).slideToggle(150, 'swing');
-  });
-
-	var isTouchDevice = 'ontouchstart' in document.documentElement;
-	if( isTouchDevice ) {
-		$('p.category').show();
-	}
+  // // Reveal project categories on hover
+  // $('.project').hover(function() {
+  //   $('p.category', $(this)).slideToggle(150, 'swing');
+  // });
+  //
+	// var isTouchDevice = 'ontouchstart' in document.documentElement;
+	// if( isTouchDevice ) {
+	// 	$('p.category').show();
+	// }
 
   // Unwrap images from p tags
   $('.project-content p > img').unwrap();
