@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	var isTouchDevice = 'ontouchstart' in document.documentElement;
 	if( isTouchDevice ) {
-    $('p.category').css({'opacity': "1", 'height': '20px'});
+    $('p.category').css({'height': '20px'});
 	}
 
   // Unwrap images from p tags
