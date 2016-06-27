@@ -13,5 +13,5 @@ thumb-text-color: "#222222"
 </div>
 
 <div class="text-block center-content">
-  <a href="https://dl.dropboxusercontent.com/u/2631181/allwhite-mockups.zip" class="button">Download .PSD Mock-ups</a>
+  <a href="https://dl.dropboxusercontent.com/u/2631181/allwhite-mockups.zip" class="button">Download Mock-ups (.PSD)</a>
 </div>
