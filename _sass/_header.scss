@@ -14,6 +14,17 @@
     padding: 0;
   }
 
+  .my-info-toggle {
+    display: block;
+    background-image: url('../assets/wave.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 41px;
+    padding: 0;
+    cursor: crosshair;
+  }
+
 }
 
 header.single {
