@@ -13,10 +13,8 @@ thumb-text-color: "#ffffff"
 Coffee, the new coffee concept for Couche-Tard.
 Simply Great Coffee unit at Statoil convenience
 store in Oslo, Norway.</p>
-<p>Statoil’s new coffee concept is not only being
-rolled out at Norwegian gas stations. Alimentation
-Couche-Tard has now introduced this coffee
-concept at a number of its companies,
+<p>Alimentation Couche-Tard has now introduced this
+coffee concept at a number of its companies,
 with significant volumes being involved.</p>
 <p>In Europe, the concept was launched at 20%
 of the gas stations, resulting in a 10% increase
