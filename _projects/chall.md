@@ -32,5 +32,5 @@ how they respond.</p>
 ![Chall in BNN's UI Book]({{ site.baseurl }}/assets/images/chall-ui-book-2.jpg)
 
 <div class="text-block center-content">
-  <a href="https://itunes.apple.com/us/app/chall/id969194272?mt=8" class="button">Download from App Store</a>
+  <a href="https://itunes.apple.com/us/app/chall/id969194272?mt=8" target="_blank" class="button">Download from App Store</a>
 </div>

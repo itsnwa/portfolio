@@ -21,5 +21,5 @@ thumb-text-color: "#222222"
 ![Floor Plan Paper]({{ site.baseurl }}/assets/images/cl_floorplan-1.jpg)
 
 <div class="text-block center-content">
-  <a href="http://chelsealandmark.com" class="button">Open website</a>
+  <a href="http://chelsealandmark.com" target="_blank" class="button">Open website</a>
 </div>
