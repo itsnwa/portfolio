@@ -27,5 +27,5 @@ and preferences at the given time.</p>
 ![vidFlow Desktop]({{ site.baseurl }}/assets/images/vidflow-profile-playlists-desktop.jpg)
 
 <div class="text-block center-content">
-  <a href="http://chelsealandmark.com" class="button">Open website</a>
+  <a href="http://vidflow.com" class="button">Open website</a>
 </div>
