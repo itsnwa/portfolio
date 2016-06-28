@@ -16,6 +16,9 @@ twitter_username: nichlaswa
 github_username:  itsnwa
 portfolio_name: Nichlas Wærnes Andersen
 
+# Work availability
+available: true
+
 # Push server to network devices
 host: 0.0.0.0
 

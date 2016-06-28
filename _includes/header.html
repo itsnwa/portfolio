@@ -12,7 +12,11 @@
     </div>
 
     <div class="column availability">
+      {% if site.available == true %}
       <span class="dot green"></span>I'm currently open for work</p>
+      {% elsif site.available == false %}
+      <span class="dot red"></span>I'm fully booked at this point</p>
+      {% endif %}
     </div>
 
     <div class="column contact">
