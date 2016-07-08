@@ -12,9 +12,9 @@
     </div>
 
     <div class="column availability">
-      {% if page.available == true %}
+      {% if site.hirable == true %}
       <span class="dot green"></span>I'm currently open for work</p>
-      {% elsif page.available == false %}
+      {% elsif site.hirable == false %}
       <span class="dot red"></span>I'm fully booked at this point</p>
       {% endif %}
     </div>

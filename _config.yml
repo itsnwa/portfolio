@@ -15,6 +15,7 @@ url: "http://itsnwa.com" # the base hostname & protocol for your site
 twitter_username: nichlaswa
 github_username:  itsnwa
 portfolio_name: Nichlas Wærnes Andersen
+hirable: true
 
 # Push server to network devices
 host: 0.0.0.0
