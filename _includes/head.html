@@ -12,16 +12,17 @@
   <!-- Fav-icon -->
   <link href="{{ site.baseurl }}/assets/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="{{ site.baseurl }}/assets/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <meta property="og:site_name" content="Nichlas Wærnes Andersen">
-  <meta property="og:image" content="{{ site.baseurl }}/assets/og.jpg">
 
-  <!-- Twitter meta  -->
+  <!-- Embed meta  -->
+  <meta property="og:site_name" content="{% if page.layout == 'project' %}{{ page.title }} by {{ site.name }}{% else %}{{ site.name }}{% endif %}">
+  <meta property="og:image" content="{% if page.layout == 'default' %}{{ site.baseurl }}/assets/og.jpg{% else %}{{ site.baseurl }}/assets/images/{{ page.thumbnail }}{% endif %}">
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@nichlaswa">
   <meta name="twitter:creator" content="@nichlaswa">
-  <meta name="twitter:title" content="{{ projects.title }}">
+  <meta name="twitter:title" content="{% if page.layout == 'project' %}{{ page.title }} by {{ site.name }}{% else %}{{ site.name }}{% endif %}">
   <meta name="twitter:description" content="{% if page.layout == 'default' %}{{ site.description }}{% else %}{{ page.description }}{% endif %}">
-  <meta name="twitter:image" content="{{ site.baseurl }}/assets/images/{{ projects.thumbnail }}">
+  <meta name="twitter:image" content="{{ site.baseurl }}/assets/images/{{ page.thumbnail }}">
 
   <!-- Title and Style -->
   <title>{% if page.layout == 'project' %}{{ page.title }} by {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
