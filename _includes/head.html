@@ -20,7 +20,7 @@
   <meta name="twitter:site" content="@nichlaswa">
   <meta name="twitter:creator" content="@nichlaswa">
   <meta name="twitter:title" content="{{ projects.title }}">
-  <meta name="twitter:description" content="{{ projects.description }}">
+  <meta name="twitter:description" content="{{% if page.url == '{{ base.url }}/index.html' %}}{{ site.description }}{{% else %}}{{ projects.description }}{{% endif %}}">
   <meta name="twitter:image" content="{{ site.baseurl }}/assets/images/{{ projects.thumbnail }}">
 
   <!-- Title and Style -->
