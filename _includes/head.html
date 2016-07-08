@@ -5,13 +5,25 @@
   <meta name="author" content="{{ site.name }}" />
   <meta name="HandheldFriendly" content="true" />
   <meta name="MobileOptimized" content="320" />
+
   <!-- Use maximum-scale and user-scalable at your own risk. It disables pinch/zoom. Think about usability/accessibility before including.-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
   <!-- Fav-icon -->
   <link href="{{ site.baseurl }}/assets/apple-touch-icon.png" rel="apple-touch-icon">
   <link href="{{ site.baseurl }}/assets/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <meta property="og:site_name" content="Nichlas Wærnes Andersen">
   <meta property="og:image" content="{{ site.baseurl }}/assets/og.jpg">
+
+  <!-- Twitter meta  -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@nichlaswa">
+  <meta name="twitter:creator" content="@nichlaswa">
+  <meta name="twitter:title" content="{{ projects.title }}">
+  <meta name="twitter:description" content="{{ projects.description }}">
+  <meta name="twitter:image" content="{{ site.baseurl }}/assets/images/{{ projects.thumbnail }}">
+
+  <!-- Title and Style -->
   <title>Nichlas Wærnes Andersen</title>
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" media="screen">
