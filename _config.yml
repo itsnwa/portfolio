@@ -1,14 +1,11 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Used so Jekyll outputs the site correctly so Gulp can do what it wants
+source: .tmp/src
+destination: .tmp/dist
 
 # Site settings
 title: Nichlas Wærnes Andersen
 name: Nichlas Wærnes Andersen
-email: nichlas@itsnwa.com
+email: nichlas@waernes.com
 description: Multi-disiplinary designer based in Brooklyn, NY
 baseurl: ""
 url: "http://waernes.co" # the base hostname & protocol for your site
@@ -17,14 +14,8 @@ github_username:  itsnwa
 portfolio_name: Nichlas Wærnes Andersen
 hirable: true
 
-# Push server to network devices
-host: 0.0.0.0
-
-# Build settings
+# Markdown library and options
 markdown: kramdown
-sass:
-  sass_dir: _sass
-  style: compressed
 
 # Project collection
 collections:
