@@ -1,0 +1,116 @@
+section.project {
+  background-color: $lightgrey;
+  padding: 1em 1em 0.2em 1em;
+  min-height: calc(100vh - 8em);
+
+  .project-details {
+    display: flex;
+    padding: 2em 0;
+    font-size: .8em;
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1em;
+      padding-bottom: .5em;
+    }
+
+    .column {
+      width: 25%;
+      padding: 0 2em;
+      flex: 1;
+
+      p { color: lighten($black, 20); }
+
+      &:first-child { padding-left: 0; }
+
+      &:nth-child(2) { border-left: 1px solid $black; }
+
+    }
+
+    .back {
+      align-self: center;
+
+      a.arrow {
+        height: 3em;
+        width: 60px;
+        display: inline-block;
+        background-image: url('../assets/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0;
+        -webkit-transition: all 140ms ease;
+        -moz-transition: all 140ms ease;
+        -ms-transition: all 140ms ease;
+        -o-transition: all 140ms ease;
+        transition: all 140ms ease;
+
+        &:hover {
+          transform: translate(20%, 0);
+        }
+
+      }
+
+    }
+
+  }
+
+  .project-content {
+    padding: 1em 0 0 0;
+    display: flex;
+    flex-direction: column;
+
+    .text-block {
+      align-self: center;
+      padding: 3em 0 4em 0;
+      width: 60%;
+
+      p {
+        line-height: 1.9em;
+        padding: 1em 0;
+      }
+
+    }
+
+    .center-content {
+      text-align: center;
+    }
+
+    // If there's two text-block's on top of each other, remove top padding from the last one.
+    .text-block + .text-block {
+      padding-top: 0;
+      padding-bottom: 6em;
+    }
+
+    // If there's text after button, increase the padding.
+    a.button + p {
+      padding-top: 4em;
+    }
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding-bottom: 1em;
+    }
+
+    // Quad image setup without space
+    .four-img-block {
+      display: flex;
+      flex-wrap: wrap;
+      line-height: 0;
+      margin-bottom: 1em;
+
+      .img-block {
+        width: 50%;
+        img {
+          padding-bottom: 0;
+        }
+      }
+
+    }
+
+  }
+
+}
