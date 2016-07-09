@@ -1,30 +1,17 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title: Nichlas Wærnes Andersen
-name: Nichlas Wærnes Andersen
-email: nichlas@itsnwa.com
+title: Portfolio
+email: nichlas@waernes.co
 description: Multi-disiplinary designer based in Brooklyn, NY
-baseurl: ""
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://waernes.co" # the base hostname & protocol for your site
-twitter_username: nichlaswa
-github_username:  itsnwa
-portfolio_name: Nichlas Wærnes Andersen
-hirable: true
+twitter: nichlaswa
+github: itsnwa
 
-# Push server to network devices
-host: 0.0.0.0
+# Let the viewers know if your available or not
+hirable: true
 
 # Build settings
 markdown: kramdown
-sass:
-  sass_dir: _sass
-  style: compressed
 
 # Project collection
 collections:
@@ -38,3 +25,9 @@ defaults:
     values:
       path: ""
       layout: project
+
+# Let's hide this please
+exclude: ["_dev",
+          "gulpfile.js",
+          "node_modules",
+          "package.json"]
