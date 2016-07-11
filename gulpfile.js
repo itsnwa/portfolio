@@ -11,7 +11,6 @@ const gulp        = require('gulp'),
       prefixer    = require('gulp-autoprefixer'),
       connect     = require('gulp-connect');
       cp          = require('child_process');
-      ghPages     = require('gulp-gh-pages');
 
 // Set the path variables
 const base_path = './',
@@ -66,12 +65,6 @@ gulp.task('copy-fonts', function () {
       .src(paths.fonts)
       .pipe(rename({dirname: dist + '/fonts'}))
       .pipe(gulp.dest('./'));
-});
-
-// Deploy to Github Pages
-gulp.task('deploy', function() {
-  return gulp.src('./**/*')
-    .pipe(ghPages());
 });
 
 // Rebuild Jekyll
