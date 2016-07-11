@@ -1,16 +1,17 @@
 // Require all the things
-const gulp      = require('gulp'),
-      sass      = require('gulp-sass'),
-      gutil     = require('gulp-util'),
-      plumber   = require('gulp-plumber'),
-      rename    = require('gulp-rename'),
-      minifyCSS = require('gulp-minify-css'),
-      uglify    = require('gulp-uglify'),
-      imagemin  = require('gulp-imagemin'),
-      prefixer  = require('gulp-autoprefixer'),
-      connect   = require('gulp-connect');
-      cp        = require('child_process');
-      ghPages   = require('gulp-gh-pages');
+const gulp        = require('gulp'),
+      browserSync = require('browser-sync').create(),
+      sass        = require('gulp-sass'),
+      gutil       = require('gulp-util'),
+      plumber     = require('gulp-plumber'),
+      rename      = require('gulp-rename'),
+      minifyCSS   = require('gulp-minify-css'),
+      uglify      = require('gulp-uglify'),
+      imagemin    = require('gulp-imagemin'),
+      prefixer    = require('gulp-autoprefixer'),
+      connect     = require('gulp-connect');
+      cp          = require('child_process');
+      ghPages     = require('gulp-gh-pages');
 
 // Set the path variables
 const base_path = './',
