@@ -3,13 +3,11 @@ const gulp        = require('gulp'),
       browserSync = require('browser-sync'),
       sass        = require('gulp-sass'),
       gutil       = require('gulp-util'),
-      plumber     = require('gulp-plumber'),
       rename      = require('gulp-rename'),
       minifyCSS   = require('gulp-minify-css'),
       uglify      = require('gulp-uglify'),
       imagemin    = require('gulp-imagemin'),
       prefixer    = require('gulp-autoprefixer'),
-      connect     = require('gulp-connect');
       cp          = require('child_process');
 
 
@@ -61,10 +59,6 @@ gulp.task('browser-sync', ['compile-sass', 'jekyll-build'], function() {
 // Compile sass to css
 gulp.task('compile-sass', () => {
   return gulp.src(paths.scss)
-    .pipe(plumber((error) => {
-        gutil.log(gutil.colors.red(error.message));
-        gulp.task('compile-sass').emit('end');
-    }))
     .pipe(sass())
     .pipe(prefixer('last 10 versions', 'ie 9'))
     .pipe(minifyCSS())
