@@ -1,6 +1,6 @@
 // Require all the things
 const gulp        = require('gulp'),
-      browserSync = require('browser-sync').create(),
+      browserSync = require('browser-sync'),
       sass        = require('gulp-sass'),
       gutil       = require('gulp-util'),
       plumber     = require('gulp-plumber'),
@@ -11,6 +11,7 @@ const gulp        = require('gulp'),
       prefixer    = require('gulp-autoprefixer'),
       connect     = require('gulp-connect');
       cp          = require('child_process');
+
 
 // Set the path variables
 const base_path = './',
@@ -28,6 +29,35 @@ const base_path = './',
       };
 
 
+var messages = {
+    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+};
+
+
+// Build the Jekyll Site
+gulp.task('jekyll-build', function (done) {
+    browserSync.notify(messages.jekyllBuild);
+    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
+
+
+// Rebuild Jekyll & do page reload
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+    browserSync.reload();
+});
+
+
+// Wait for jekyll-build, then launch the Server
+gulp.task('browser-sync', ['compile-sass', 'jekyll-build'], function() {
+    browserSync({
+        server: {
+            baseDir: '_site'
+        }
+    });
+});
+
+
 // Compile sass to css
 gulp.task('compile-sass', () => {
   return gulp.src(paths.scss)
@@ -36,11 +66,12 @@ gulp.task('compile-sass', () => {
         gulp.task('compile-sass').emit('end');
     }))
     .pipe(sass())
-    .pipe(prefixer('last 3 versions', 'ie 9'))
+    .pipe(prefixer('last 10 versions', 'ie 9'))
     .pipe(minifyCSS())
     .pipe(rename({dirname: dist + '/css'}))
     .pipe(gulp.dest('./'));
 });
+
 
 // Uglify JS
 gulp.task('uglify-js', function () {
@@ -51,6 +82,7 @@ gulp.task('uglify-js', function () {
     .pipe(gulp.dest('./'));
 });
 
+
 // Compress images
 gulp.task('imagemin', () =>
 	gulp.src(paths.images)
@@ -58,6 +90,7 @@ gulp.task('imagemin', () =>
     .pipe(rename({dirname: dist + '/images'}))
     .pipe(gulp.dest('./'))
 );
+
 
 // Copy font files
 gulp.task('copy-fonts', function () {
@@ -67,26 +100,13 @@ gulp.task('copy-fonts', function () {
       .pipe(gulp.dest('./'));
 });
 
-// Rebuild Jekyll
-gulp.task('build-jekyll', (code) => {
-  return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
-    .on('error', (error) => gutil.log(gutil.colors.red(error.message)))
-    .on('close', code);
-})
-
-// Setup Server
-gulp.task('server', () => {
-  connect.server({
-    root: ['_site'],
-    port: 4000
-  });
-})
 
 // Watch files
 gulp.task('watch', () => {
   gulp.watch(paths.scss, ['compile-sass']);
-  gulp.watch(paths.jekyll, ['build-jekyll']);
+  gulp.watch(paths.jekyll, ['jekyll-rebuild']);
 });
 
+
 // Start Everything with the default task
-gulp.task('default', [ 'compile-sass', 'uglify-js', 'imagemin', 'copy-fonts', 'build-jekyll', 'server', 'watch' ]);
+gulp.task('default', ['browser-sync', 'watch']);
