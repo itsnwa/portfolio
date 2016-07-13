@@ -8,6 +8,7 @@ const gulp        = require('gulp'),
       uglify      = require('gulp-uglify'),
       imagemin    = require('gulp-imagemin'),
       prefixer    = require('gulp-autoprefixer'),
+      plumber     = require('gulp-plumber'),
       cp          = require('child_process');
 
 
@@ -33,10 +34,11 @@ var messages = {
 
 
 // Build the Jekyll Site
-gulp.task('jekyll-build', function (done) {
+gulp.task('jekyll-build', function (code) {
     browserSync.notify(messages.jekyllBuild);
     return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
-        .on('close', done);
+      .on('error', (error) => gutil.log(gutil.colors.red(error.message)))
+      .on('close', code);
 });
 
 
@@ -59,6 +61,10 @@ gulp.task('browser-sync', ['compile-sass', 'jekyll-build'], function() {
 // Compile sass to css
 gulp.task('compile-sass', () => {
   return gulp.src(paths.scss)
+    .pipe(plumber((error) => {
+      gutil.log(gutil.colors.red(error.message));
+      gulp.task('compile-sass').emit('end');
+    }))
     .pipe(sass())
     .pipe(prefixer('last 10 versions', 'ie 9'))
     .pipe(minifyCSS())
@@ -78,12 +84,16 @@ gulp.task('uglify-js', function () {
 
 
 // Compress images
-gulp.task('imagemin', () =>
-	gulp.src(paths.images)
+gulp.task('imagemin', function () {
+	return gulp.src(paths.images)
+    .pipe(plumber((error) => {
+      gutil.log(gutil.colors.red(error.message));
+      gulp.task('imagemin').emit('end');
+    }))
 		.pipe(imagemin())
     .pipe(rename({dirname: dist + '/images'}))
-    .pipe(gulp.dest('./'))
-);
+    .pipe(gulp.dest('./'));
+});
 
 
 // Copy font files
