@@ -9,6 +9,7 @@ const gulp        = require('gulp'),
       imagemin    = require('gulp-imagemin'),
       prefixer    = require('gulp-autoprefixer'),
       plumber     = require('gulp-plumber'),
+      del         = require('del'),
       cp          = require('child_process');
 
 
@@ -103,6 +104,19 @@ gulp.task('copy-fonts', function () {
       .pipe(rename({dirname: dist + '/fonts'}))
       .pipe(gulp.dest('./'));
 });
+
+
+// Clean build folders
+gulp.task('clean', function () {
+  return del([
+    '_site',
+    'assets'
+  ]);
+});
+
+
+// Build site silently
+gulp.task('build', ['compile-sass', 'jekyll-build', 'copy-fonts', 'imagemin', 'uglify-js'])
 
 
 // Watch files
