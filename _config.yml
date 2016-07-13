@@ -1,5 +1,6 @@
 # Site settings
 title: Portfolio
+name: Nichlas Wærnes Andersen
 email: nichlas@waernes.co
 description: Multi-disiplinary designer based in Brooklyn, NY
 baseurl: "" # the subpath of your site, e.g. /blog
