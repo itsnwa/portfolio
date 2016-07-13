@@ -116,7 +116,7 @@ gulp.task('clean', function () {
 
 
 // Build site silently
-gulp.task('build', ['compile-sass', 'jekyll-build', 'copy-fonts', 'imagemin', 'uglify-js'])
+gulp.task('prod', ['compile-sass', 'jekyll-build', 'copy-fonts', 'imagemin', 'uglify-js'])
 
 
 // Watch files
