@@ -6,4 +6,4 @@ I'm a multidisiplinary designer from Norway, currently living in Brooklyn, NY.
 
 ## View the portfolio
 
-> [waernes.co](http://waernes.co)
+> [itsnwa.com](http://itsnwa.com)
