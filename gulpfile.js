@@ -122,6 +122,8 @@ gulp.task('prod', ['compile-sass', 'jekyll-build', 'copy-fonts', 'imagemin', 'ug
 // Watch files
 gulp.task('watch', () => {
   gulp.watch(paths.scss, ['compile-sass']);
+  gulp.watch(paths.js, ['uglify-js']);
+  gulp.watch(paths.images, ['imagemin']);
   gulp.watch(paths.jekyll, ['jekyll-rebuild']);
 });
 

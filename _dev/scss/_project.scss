@@ -95,6 +95,12 @@ section.project {
       padding-bottom: 1em;
     }
 
+    video {
+      width: 100%    !important;
+      height: auto   !important;
+      padding-bottom: 1em;
+    }
+
     // Quad image setup without space
     .four-img-block {
       display: flex;
