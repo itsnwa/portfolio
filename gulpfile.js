@@ -4,7 +4,7 @@ const gulp        = require('gulp'),
       sass        = require('gulp-sass'),
       gutil       = require('gulp-util'),
       rename      = require('gulp-rename'),
-      minifyCSS   = require('gulp-minify-css'),
+      cleanCSS    = require('gulp-clean-css'),
       uglify      = require('gulp-uglify'),
       imagemin    = require('gulp-imagemin'),
       prefixer    = require('gulp-autoprefixer'),
@@ -68,7 +68,7 @@ gulp.task('compile-sass', () => {
     }))
     .pipe(sass())
     .pipe(prefixer('last 10 versions', 'ie 9'))
-    .pipe(minifyCSS())
+    .pipe(cleanCSS())
     .pipe(rename({dirname: dist + '/css'}))
     .pipe(gulp.dest('./'));
 });
