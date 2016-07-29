@@ -1,10 +1,10 @@
 # Site settings
 title: Portfolio
 name: Nichlas Wærnes Andersen
-email: nichlas@waernes.co
+email: nichlas@itsnwa.com
 description: Multi-disiplinary designer based in Brooklyn, NY
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://waernes.co" # the base hostname & protocol for your site
+url: "http://itsnwa.com" # the base hostname & protocol for your site
 twitter: nichlaswa
 github: itsnwa
 
