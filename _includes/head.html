@@ -16,18 +16,18 @@
 
   <!-- Embed meta  -->
   <meta property="og:site_name" content="{% if page.layout == 'project' %}{{ page.title }} by {{ site.name }}{% else %}{{ site.name }}{% endif %}">
-  <meta property="og:image" content="{% if page.layout == 'default' %}/assets/images/og.jpg{% else %}/assets/images/{{ page.thumbnail }}{% endif %}">
+  <meta property="og:image" content="{% if page.layout == 'default' %}{{ site.baseurl }}/assets/images/og.jpg{% else %}{{ site.baseurl }}/assets/images/{{ page.thumbnail }}{% endif %}">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@nichlaswa">
-  <meta name="twitter:creator" content="@nichlaswa">
+  <meta name="twitter:site" content="@{{ site.twitter }}">
+  <meta name="twitter:creator" content="@{{ site.twitter }}">
   <meta name="twitter:title" content="{% if page.layout == 'project' %}{{ page.title }} by {{ site.name }}{% else %}{{ site.name }}{% endif %}">
   <meta name="twitter:description" content="{% if page.layout == 'default' %}{{ site.description }}{% else %}{{ page.description }}{% endif %}">
-  <meta name="twitter:image" content="/assets/images/{{ page.thumbnail }}">
+  <meta name="twitter:image" content="{{ site.baseurl }}/assets/images/{{ page.thumbnail }}">
 
   <!-- Title and Style -->
   <title>{% if page.layout == 'project' %}{{ page.title }} by {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" media="screen">
-  <link rel="stylesheet" href="/assets/css/style.css" media="screen">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" media="screen">
 </head>

@@ -2,10 +2,14 @@
 title: Portfolio
 name: Nichlas Wærnes Andersen
 email: nichlas@itsnwa.com
-description: Multi-disiplinary designer based in Brooklyn, NY
-baseurl: "" # the subpath of your site, e.g. /blog
+description: Art Director & Graphic Designer from Norway, based in Brooklyn, NY.
+baseurl: "" # Leave blank, if github url; the subpath of your site, e.g. /blog
 url: "http://itsnwa.com" # the base hostname & protocol for your site
+
+# Social links
 twitter: nichlaswa
+instagram: its.nwa
+dribbble: nwa
 github: itsnwa
 
 # Let the viewers know if your available or not
