@@ -9,7 +9,7 @@ twitter: nichlaswa
 github: itsnwa
 
 # Let the viewers know if your available or not
-hirable: false
+hirable: true
 
 # Build settings
 markdown: kramdown
