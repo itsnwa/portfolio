@@ -1,5 +1,5 @@
 // Require all the things
-const gulp        = require('gulp'),
+var   gulp        = require('gulp'),
       browserSync = require('browser-sync'),
       sass        = require('gulp-sass'),
       gutil       = require('gulp-util'),
@@ -14,7 +14,7 @@ const gulp        = require('gulp'),
 
 
 // Set the path variables
-const base_path = './',
+var   base_path = './',
       src = base_path + '_dev',
       dist = base_path + 'assets',
       paths = {
@@ -115,7 +115,7 @@ gulp.task('clean', function () {
 });
 
 
-// Build site silently
+// Build site
 gulp.task('prod', ['compile-sass', 'jekyll-build', 'copy-fonts', 'imagemin', 'uglify-js'])
 
 
