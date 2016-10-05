@@ -28,7 +28,12 @@ defaults:
   - scope:
       type: projects
     values:
-      path: ""
+      title: ""
+      what: ""
+      year: ""
+      description: ""
+      thumbnail: ""
+      thumb-text-color: ""
       layout: project
 
 # Let's hide this please
