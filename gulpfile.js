@@ -1,16 +1,18 @@
 // Require all the things
-var   gulp        = require('gulp'),
-      browserSync = require('browser-sync'),
-      sass        = require('gulp-sass'),
-      gutil       = require('gulp-util'),
-      rename      = require('gulp-rename'),
-      cleanCSS    = require('gulp-clean-css'),
-      uglify      = require('gulp-uglify'),
-      imagemin    = require('gulp-imagemin'),
-      prefixer    = require('gulp-autoprefixer'),
-      plumber     = require('gulp-plumber'),
-      del         = require('del'),
-      cp          = require('child_process');
+var   gulp         = require('gulp'),
+      browserSync  = require('browser-sync'),
+      sass         = require('gulp-sass'),
+      gutil        = require('gulp-util'),
+      rename       = require('gulp-rename'),
+      postcss      = require('gulp-postcss'),
+      autoprefixer = require('autoprefixer'),
+      cssnano      = require('gulp-cssnano'),
+      sourcemaps   = require('gulp-sourcemaps'),
+      uglify       = require('gulp-uglify'),
+      imagemin     = require('gulp-imagemin'),
+      plumber      = require('gulp-plumber'),
+      del          = require('del'),
+      cp           = require('child_process');
 
 
 // Set the path variables
@@ -50,25 +52,62 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 
 
 // Wait for jekyll-build, then launch the Server
-gulp.task('browser-sync', ['compile-sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['css', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
-        }
+        },
+        port: 3000,
+        notify: {
+          styles: {
+            top: '30px',
+            left: '50%',
+            width: '200px',
+            transform: 'translate(-50%,-50%)',
+            margin: '0px',
+            padding: '8px 12px',
+            position: 'fixed',
+            fontSize: '13px',
+            fontFamily: 'Helvetica',
+            zIndex: '9999',
+            borderRadius: '16px',
+            color: 'white',
+            textAlign: 'center',
+            display: 'block',
+            backgroundColor: 'rgba(0,0,0, 0.8)'
+          }
+        },
+        logLevel: 'silent'
     });
+
+    // Some fancy console art
+    console.clear();
+    console.log('Starting DevelopmentServer');
+    console.log('           ');
+    console.log('           ');
+    console.log('    /   /  _  / \\     NWA');
+    console.log('   / \\ / \\/ \\/ - \\    Local Development Environment');
+    console.log('           ');
+    console.log('           ');
+    console.log('Listening on port 3000');
+    console.log('           ');
+    console.log('           ');
+
 });
 
 
-// Compile sass to css
-gulp.task('compile-sass', () => {
+// CSS Process
+gulp.task('css', () => {
   return gulp.src(paths.scss)
     .pipe(plumber((error) => {
       gutil.log(gutil.colors.red(error.message));
       gulp.task('compile-sass').emit('end');
     }))
+    .pipe(sourcemaps.init() )
     .pipe(sass())
-    .pipe(prefixer('last 10 versions', 'ie 9'))
-    .pipe(cleanCSS())
+    .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+    .pipe(cssnano())
+    .pipe(sourcemaps.write('.'))
     .pipe(rename({dirname: dist + '/css'}))
     .pipe(gulp.dest('./'));
 });
@@ -116,12 +155,12 @@ gulp.task('clean', function () {
 
 
 // Build site
-gulp.task('prod', ['compile-sass', 'jekyll-build', 'copy-fonts', 'imagemin', 'uglify-js'])
+gulp.task('prod', ['css', 'jekyll-build', 'copy-fonts', 'imagemin', 'uglify-js'])
 
 
 // Watch files
 gulp.task('watch', () => {
-  gulp.watch(paths.scss, ['compile-sass']);
+  gulp.watch(paths.scss, ['css']);
   gulp.watch(paths.js, ['uglify-js']);
   gulp.watch(paths.images, ['imagemin']);
   gulp.watch(paths.jekyll, ['jekyll-rebuild']);

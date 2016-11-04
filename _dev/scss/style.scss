@@ -1,6 +1,5 @@
 // Import partials from `partials_dir` (defaults to `partials`)
-@import
-        "fonts",
+@import "fonts",
         "project-palette",
         "mixins",
         "variables",
@@ -9,12 +8,11 @@
         "footer",
         "work",
         "project",
-        "instagram",
+        "instagram";
 
         // Project specific styles
-        "proj-chelsea",
-        "proj-chall"
-;
+@import "proj-chelsea",
+        "proj-chall";
 
 ::selection {
   background: $highlight; /* WebKit/Blink Browsers */
@@ -46,9 +44,9 @@ body {
 a {
   color: $black;
   text-decoration: none;
-  -webkit-transition:  all 0.18s cubic-bezier(0.55, 0.025, 0.455, 0.98);
-  -o-transition:       all 0.18s cubic-bezier(0.55, 0.025, 0.455, 0.98);
-  transition:          all 0.18s cubic-bezier(0.55, 0.025, 0.455, 0.98);
+  -webkit-transition:  border .18s cubic-bezier(0.55, 0.025, 0.455, 0.98);
+  -o-transition:       border .18s cubic-bezier(0.55, 0.025, 0.455, 0.98);
+  transition:          border .18s cubic-bezier(0.55, 0.025, 0.455, 0.98);
 
   &:hover {
     cursor: crosshair;
