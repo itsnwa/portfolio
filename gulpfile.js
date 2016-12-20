@@ -81,7 +81,6 @@ gulp.task('browser-sync', ['css', 'jekyll-build'], function() {
     });
 
     // Some fancy console art
-    console.clear();
     console.log('Starting DevelopmentServer');
     console.log('           ');
     console.log('           ');
