@@ -12,7 +12,8 @@
 
         // Project specific styles
 @import "proj-chelsea",
-        "proj-chall";
+        "proj-chall",
+        "proj-forestry";
 
 ::selection {
   background: $highlight; /* WebKit/Blink Browsers */
@@ -30,6 +31,20 @@
 p,h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0;
+}
+
+.huge-text {
+  font-size: 3em;
+  margin-top: 2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.huge-text + p {
+  text-align: center;
+  margin: 2em auto 6em auto;
+  max-width: 530px;
+  white-space: wrap;
 }
 
 body {
@@ -179,6 +194,10 @@ a.button {
 
     }
 
+  }
+
+  .huge-text {
+    margin-top: 1em;
   }
 
 }
