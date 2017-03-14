@@ -7,6 +7,7 @@ title: Journal
   <ul>
     {% for post in site.posts %}
       <li class="journal--post">
+        <span class="journal--post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         {{ post.content }}
       </li>
     {% endfor %}

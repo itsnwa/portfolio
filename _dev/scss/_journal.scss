@@ -9,6 +9,20 @@
 
   + .journal--post { margin-top: 8rem; }
 
+  // Post date
+  .journal--post-meta {
+    display: block;
+    font-size: .8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #666666;
+  }
+
+  // Paragraph color
+  p {
+    color: #666666;
+  }
+
   // Base font-size
   p, a, span, code, pre {
     font-size: 16px;
@@ -43,10 +57,10 @@
 
   h1 {
     text-align: center;
-    font-size: 3.25em;
+    font-size: 3.25rem;
 
     @media screen and (max-width: $breakpoint-small) {
-      font-size: 2.25em;
+      font-size: 2.25rem;
     }
 
   }
@@ -78,7 +92,7 @@
 
   // Code line
   code.highlighter-rouge {
-    padding: .25em 1em;
+    padding: .15em .5em;
   }
 
 }
