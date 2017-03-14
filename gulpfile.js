@@ -27,7 +27,7 @@ var   base_path = './',
           images: [ src + '/assets/*',
                     src + '/images/*'],
           fonts: [ src + '/fonts/*'],
-          jekyll: ['index.html', '_projects/*', '_layouts/*', '_includes/*' , 'assets/*', 'assets/**/*']
+          jekyll: ['index.html', '_projects/*', '_posts/*', 'journal/*', '_layouts/*', '_includes/*' , 'assets/*', 'assets/**/*']
       };
 
 

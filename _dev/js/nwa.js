@@ -1,12 +1,15 @@
 $(document).ready(function() {
 
+	// Initialize Syntax highlighting
+	hljs.initHighlightingOnLoad();
+
 	var isTouchDevice = 'ontouchstart' in document.documentElement;
 	if( isTouchDevice ) {
     $('p.category').css({'height': '20px'});
 	}
 
   // Unwrap images from p tags
-  $('.project-content p > img').unwrap();
+  $('p > img').unwrap();
 
   // My info section
   $('.my-info-toggle').click(function() {

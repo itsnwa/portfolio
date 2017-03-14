@@ -1,0 +1,14 @@
+---
+layout: default
+title: Journal
+---
+{% include header.html %}
+<div class="journal--container">
+  <ul>
+    {% for post in site.posts %}
+      <li class="journal--post">
+        {{ post.content }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
