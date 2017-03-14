@@ -1,11 +1,22 @@
 .journal--container {
   margin: 0 auto;
-  width: 680px;
   max-width: 90%;
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
 }
 
 .journal--post {
   list-style: none;
+
+  *:not(img) {
+    width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   + .journal--post { margin-top: 8rem; }
 

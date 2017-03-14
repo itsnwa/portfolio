@@ -3,12 +3,31 @@ date:   2017-03-13
 categories: tip,how-to
 ---
 # Let's get up and running with front-end development
-First.. I'm a macintosh user, so if you're using Windows, this guide might be hard to follow step-by-step. Second; this guide is very opinonated and just shows how to get up and running with the most common tools within html/css/js development.
+First.. I'm a macintosh user, so if you're using Windows, this guide might be hard to follow step-by-step. Second; this guide is very opinonated and just shows how to get up and running with the most common tools within HTML/CSS/JS development.
 
-![Npm install everything]({{ site.baseurl }}/assets/images/journal-npmsavedev.png)
+## Oh my zsh!
+Ok, this is probably not the most important step, but as a developer, you're spending a lot of your time inside the terminal, so let's make it good.
 
-## Goal
-Install all the basic tools; Homebrew, Git, Ruby, Rails, Node JS (incl. NPM), Yarn, Atom, Hyper Terminal.
+![Hyper Terminal Screenshot]({{ site.baseurl }}/assets/images/journal-hyper-terminal.jpg)
+
+First step is to install latest version of zsh:
+```
+$ brew install zsh
+```
+
+Second, let's change our system shell from bash to zsh:
+
+```
+$
+```
+
+Optional: Instead of using the standard macOS terminal, let's join the cool kids and install the new super hackable Hyper Terminal 😎
+
+```
+$ brew cask install hyper
+```
+
+Hyper can be tweaked in every imaginable way, but I will just post my preferred setup for now. If you want more – you should check out this [awesome](https://github.com/bnb/awesome-hyper) collection.
 
 ## Xcode Command Line Tools
 This step is required before we start installing anything else, if you already have the full Xcode app installed on your machine, you can skip this step.
