@@ -134,6 +134,28 @@ $
 
 If it was not, open Atom and hit `Cmd+Shift+P` and paste in `Window: Install Shell Commands`, which will prompt you for an administrator password.
 
+### Atom Settings
+
+Let's change some of the default settings
+
+#### Type settings
+
+- Typeface: [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)
+- Size: 14 (Default)
+- Line height: 1.58
+
+#### Scroll past end
+
+A neat little checkbox you should check is scroll past end, it makes it possible to get that last bit of code up in the middle of the screen so it's easier to work with.
+
+`Settings > Editor > Scroll Past End (Check)`
+
+#### Show indent guide
+
+By showing the indentation guide, it's easier to read nested code.
+
+`Settings > Editor > Show Indent Guide (Check)`
+
 ### Install packages
 
 #### Emmet
