@@ -13,7 +13,7 @@ First.. I'm a macintosh user, so if you're using Linux or Windows, this guide mi
 
 Ok, this is probably not the most important step, but as a developer, you're spending a lot of your time inside the terminal, so let's make it good.
 
-![Hyper Terminal Screenshot]({{ site.baseurl }}/assets/images/journal-hyper-terminal.jpg)
+![Hyper Terminal Screenshot]({{ site.baseurl }}/assets/images/journal-hyper-terminal.png)
 
 First step is to install latest version of zsh:
 
@@ -115,6 +115,8 @@ If you need to install other versions of Node, you can do so by running `nvm ins
 ## Atom
 
 No back to some more fun stuff! My editor of choice is Atom (Developed by GitHub), if you're using Sublime, some of these packages / themes might be available there as well.
+
+![Atom - Unstad Theme](https://raw.githubusercontent.com/itsnwa/unstad-ui/master/screenshot.png)
 
 ### Install Atom
 
