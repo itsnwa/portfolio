@@ -30,7 +30,6 @@
 }
 
 p,h1,h2,h3,h4,h5,h6 {
-  margin: 0;
   padding: 0;
 }
 
@@ -49,12 +48,11 @@ p,h1,h2,h3,h4,h5,h6 {
 }
 
 body {
-  font-family: 'sf-mono-regular', curiour, sans-serif;
+  font-family: 'sf-mono-regular',monospace;
   font-weight: normal;
-  font-size: .9em;
+  -webkit-font-smoothing: antialiased;
   color: $black;
   margin: 0;
-  text-rendering: optimizeLegibility;
 }
 
 a {

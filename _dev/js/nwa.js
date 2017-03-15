@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-	// Initialize Syntax highlighting
-	hljs.initHighlightingOnLoad();
-
 	var isTouchDevice = 'ontouchstart' in document.documentElement;
 	if( isTouchDevice ) {
     $('p.category').css({'height': '20px'});

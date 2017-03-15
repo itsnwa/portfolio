@@ -1,6 +1,31 @@
+$type-base-size: 16;
+$type-base-linehight: 1.58;
+$leading: $type-base-linehight * 1rem;
+
+$type-headline: 4.236em;
+$type-headline-2: 2.618em;
+$type-headline-3: 1.618em;
+
 .journal--container {
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 100%;
+
+  ul > li > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ul > li > *:not(img) {
+    width: 680px;
+    max-width: 90%;
+  }
+
+  ul > li > img {
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   ul, li {
     margin: 0;
@@ -12,12 +37,6 @@
 .journal--post {
   list-style: none;
 
-  *:not(img) {
-    width: 680px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   + .journal--post { margin-top: 8rem; }
 
   // Post date
@@ -25,7 +44,7 @@
     display: block;
     font-size: .8rem;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2 * $leading;
     color: #666666;
   }
 
@@ -36,39 +55,54 @@
 
   // Base font-size
   p, a, span, code, pre {
-    font-size: 16px;
-    line-height: 1.58;
+    font-size: $type-base-size / 16 * 100%;
+    line-height: $leading;
   }
 
-  h1 + * {
-    margin-top: 4rem;
+  p + p {
+    margin-top: $leading;
   }
 
-  p + p,
-  h2 + p,
-  h3 + p {
-    margin-top: 2rem;
+  h1 + *,
+  h2 + * {
+    margin-top: 2 * $leading;
   }
 
-  * + h2,
+  * + h2 {
+    margin-top: 4 * $leading;
+  }
+
+  h3 + * {
+    margin-top: $leading;
+  }
+
   * + h3 {
-    margin-top: 4rem;
+    margin-top: 2 * $leading;
+  }
+
+  h4 + * {
+    margin-top: $leading;
+  }
+
+  * + h4 {
+    margin-top: 2 * $leading;
   }
 
   p + img,
   h2 + img,
   h3 + img,
   pre + img {
-    margin-top: 4rem;
+    margin-top: 4 * $leading;
   }
 
   img + p {
-    margin-top: 4rem;
+    margin-top: 4 * $leading;
   }
 
   h1 {
     text-align: center;
-    font-size: 3.25rem;
+    font-size: $type-headline;
+    line-height: 1.36;
 
     @media screen and (max-width: $breakpoint-small) {
       font-size: 2.25rem;
@@ -76,8 +110,12 @@
 
   }
 
-  img {
-    max-width: 100%;
+  h2 {
+    font-size: $type-headline-2;
+  }
+
+  h3 {
+    font-size: $type-headline-3;
   }
 
   // Code
@@ -92,18 +130,53 @@
     overflow: scroll;
   }
 
-  div.highlighter-rouge + p,
   p + div.highlighter-rouge {
-    margin-top: 2rem;
+    margin-top: $leading;
   }
 
-  div.highlighter-rouge + h1 {
-    margin-top: 4rem;
+  div.highlighter-rouge + p {
+    margin-top: 2 * $leading;
   }
 
   // Code line
   code.highlighter-rouge {
     padding: .15em .5em;
+    white-space: nowrap;
+  }
+
+}
+
+
+
+
+// Code syntax theme
+
+// HTML
+.language-html {
+
+  .c { color: #cccccc; } // Comments
+  .nt { color: #696969; } // Element tags
+  .na { color: #fd9999; } // Attributes
+
+}
+
+// CSS
+.language-css {
+
+  .c { color: #cccccc; } // Comments
+  .nt { color: #696969; } // Element tags
+  .na { color: #fd9999; } // Attributes
+  .m { color: #fd9999; } // Values
+
+}
+
+// Bash
+.language-bash {
+
+  // Prompt
+  .gp {
+    user-select: none;
+    color: rgb(153, 153, 153);
   }
 
 }
