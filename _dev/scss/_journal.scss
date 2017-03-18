@@ -92,11 +92,11 @@ $type-headline-3: 1.618em;
   h2 + img,
   h3 + img,
   pre + img {
-    margin-top: 4 * $leading;
+    margin-top: 2 * $leading;
   }
 
   img + p {
-    margin-top: 4 * $leading;
+    margin-top: 2 * $leading;
   }
 
   h1 {
