@@ -37,7 +37,7 @@ var messages = {
 
 
 // Build the Jekyll Site
-gulp.task('jekyll-build', function (code) {
+gulp.task('jekyll-build', function(code) {
     browserSync.notify(messages.jekyllBuild);
     return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
       .on('error', (error) => gutil.log(gutil.colors.red(error.message)))
@@ -46,13 +46,71 @@ gulp.task('jekyll-build', function (code) {
 
 
 // Rebuild Jekyll & do page reload
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function() {
     browserSync.reload();
+}));
+
+
+// CSS Process
+gulp.task('css', function() {
+  return gulp.src(paths.scss)
+    .pipe(plumber((error) => {
+      gutil.log(gutil.colors.red(error.message));
+      gulp.task('compile-sass').emit('end');
+    }))
+    .pipe(sourcemaps.init() )
+    .pipe(sass())
+    .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+    .pipe(cssnano())
+    .pipe(sourcemaps.write('.'))
+    .pipe(rename({dirname: dist + '/css'}))
+    .pipe(gulp.dest('./'));
+});
+
+
+// Uglify JS
+gulp.task('uglify-js', function() {
+  // returns a Node.js stream, but no handling of error messages
+  return gulp.src(paths.js)
+    .pipe(uglify())
+    .pipe(rename({dirname: dist + '/js'}))
+    .pipe(gulp.dest('./'));
+});
+
+
+// Compress images
+gulp.task('imagemin', function() {
+	return gulp.src(paths.images)
+    .pipe(plumber((error) => {
+      gutil.log(gutil.colors.red(error.message));
+      gulp.task('imagemin').emit('end');
+    }))
+		.pipe(imagemin())
+    .pipe(rename({dirname: dist + '/images'}))
+    .pipe(gulp.dest('./'));
+});
+
+
+// Copy font files
+gulp.task('copy-fonts', function() {
+     gulp
+      .src(paths.fonts)
+      .pipe(rename({dirname: dist + '/fonts'}))
+      .pipe(gulp.dest('./'));
+});
+
+
+// Clean build folders
+gulp.task('clean', function() {
+  return del([
+    '_site',
+    'assets'
+  ]);
 });
 
 
 // Wait for jekyll-build, then launch the Server
-gulp.task('browser-sync', ['css', 'jekyll-build'], function() {
+gulp.task('browser-sync', gulp.series('css', 'jekyll-build', function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -92,79 +150,21 @@ gulp.task('browser-sync', ['css', 'jekyll-build'], function() {
     console.log('           ');
     console.log('           ');
 
-});
-
-
-// CSS Process
-gulp.task('css', () => {
-  return gulp.src(paths.scss)
-    .pipe(plumber((error) => {
-      gutil.log(gutil.colors.red(error.message));
-      gulp.task('compile-sass').emit('end');
-    }))
-    .pipe(sourcemaps.init() )
-    .pipe(sass())
-    .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
-    .pipe(cssnano())
-    .pipe(sourcemaps.write('.'))
-    .pipe(rename({dirname: dist + '/css'}))
-    .pipe(gulp.dest('./'));
-});
-
-
-// Uglify JS
-gulp.task('uglify-js', function () {
-  // returns a Node.js stream, but no handling of error messages
-  return gulp.src(paths.js)
-    .pipe(uglify())
-    .pipe(rename({dirname: dist + '/js'}))
-    .pipe(gulp.dest('./'));
-});
-
-
-// Compress images
-gulp.task('imagemin', function () {
-	return gulp.src(paths.images)
-    .pipe(plumber((error) => {
-      gutil.log(gutil.colors.red(error.message));
-      gulp.task('imagemin').emit('end');
-    }))
-		.pipe(imagemin())
-    .pipe(rename({dirname: dist + '/images'}))
-    .pipe(gulp.dest('./'));
-});
-
-
-// Copy font files
-gulp.task('copy-fonts', function () {
-     gulp
-      .src(paths.fonts)
-      .pipe(rename({dirname: dist + '/fonts'}))
-      .pipe(gulp.dest('./'));
-});
-
-
-// Clean build folders
-gulp.task('clean', function () {
-  return del([
-    '_site',
-    'assets'
-  ]);
-});
+}));
 
 
 // Build site
-gulp.task('prod', ['css', 'jekyll-build', 'copy-fonts', 'imagemin', 'uglify-js'])
+gulp.task('prod', gulp.series('css', 'jekyll-build', 'copy-fonts', 'imagemin', 'uglify-js'))
 
 
 // Watch files
-gulp.task('watch', () => {
-  gulp.watch(paths.scss, ['css']);
-  gulp.watch(paths.js, ['uglify-js']);
-  gulp.watch(paths.images, ['imagemin']);
-  gulp.watch(paths.jekyll, ['jekyll-rebuild']);
+gulp.task('watch', function() {
+  gulp.watch(paths.scss, gulp.series('css'));
+  gulp.watch(paths.js, gulp.series('uglify-js'));
+  gulp.watch(paths.images, gulp.series('imagemin'));
+  gulp.watch(paths.jekyll, gulp.series('jekyll-rebuild'));
 });
 
 
 // Start Everything with the default task
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', gulp.series('browser-sync', 'watch'));
