@@ -20,5 +20,8 @@ public_path: "/uploads"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
+custom_preview: true
+custom_preview_endpoint: http://ykjfu4vbkro6oq.updates.forestryutils.com:8080
+custom_preview_url: http://ykjfu4vbkro6oq.p.forestryutils.com:8080
 build:
   preview_command: bundle exec jekyll serve --port 8080 --host 0.0.0.0
