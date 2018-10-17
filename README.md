@@ -1,3 +1,7 @@
+---
+published: false
+
+---
 # Portfolio
 
 This is the personal portfolio of Nichlas Wærnes Andersen.
