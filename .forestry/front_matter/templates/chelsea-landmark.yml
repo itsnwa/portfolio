@@ -1,35 +1,32 @@
 ---
-label: Chelsea Landmark
-hide_body: 
-is_partial: 
+label: Project1
+hide_body: false
+is_partial: false
 fields:
 - name: title
   label: Title
   type: text
   hidden: false
   default: ''
+- type: file
+  name: thumbnail
+  label: Thumbnail
 - name: what
   label: What
   type: list
   hidden: false
   default: ''
+- type: text
+  name: year
+  label: Year
 - name: description
   label: Description
   type: textarea
   hidden: false
   default: ''
-- name: year
-  label: Year
-  type: text
-  hidden: false
-  default: ''
-- name: thumbnail
-  label: Thumbnail
-  type: text
-  hidden: false
-  default: ''
-- name: thumb-text-color
-  label: Thumb text color
-  type: text
-  hidden: false
-  default: ''
+- type: color
+  name: thumb-text-color
+  config:
+    color_format: Hex
+  label: Thumbnail text color
+  default: "#FFFFFF"
