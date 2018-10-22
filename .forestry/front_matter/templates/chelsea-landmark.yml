@@ -1,0 +1,35 @@
+---
+label: Chelsea Landmark
+hide_body: 
+is_partial: 
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: what
+  label: What
+  type: list
+  hidden: false
+  default: ''
+- name: description
+  label: Description
+  type: textarea
+  hidden: false
+  default: ''
+- name: year
+  label: Year
+  type: text
+  hidden: false
+  default: ''
+- name: thumbnail
+  label: Thumbnail
+  type: text
+  hidden: false
+  default: ''
+- name: thumb-text-color
+  label: Thumb text color
+  type: text
+  hidden: false
+  default: ''
