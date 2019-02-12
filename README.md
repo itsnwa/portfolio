@@ -1,10 +1,8 @@
-# Portfolio
-
-This is the personal portfolio of Nichlas Wærnes Andersen.
-I'm a multidisiplinary designer from Norway, currently living in Brooklyn, NY.
-
 ## Built with
 Jekyll & Gulp
+
+## Todo
+- [ ] Scrap this, create a new website
 
 ## View the portfolio
 
